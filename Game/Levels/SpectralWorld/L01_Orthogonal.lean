@@ -67,4 +67,6 @@ TheoremDoc real_inner_smul_right as "real_inner_smul_right" in "内积"
 TheoremDoc cancel_of_ne as "cancel_of_ne" in "实数"
 
 NewTactic «Fact» «Calc» «We» rw
+-- Verbose phrases are checked word by word; allow the connective words without listing them
+NewHiddenTactic «applied» «to» «from» «conclude» «and»
 NewTheorem real_inner_smul_left real_inner_smul_right cancel_of_ne
