@@ -1,5 +1,8 @@
 import Game.Metadata
 
+-- Mathlib's ⟪x, y⟫_ℝ notation is scoped
+open scoped InnerProductSpace
+
 World "SpectralWorld"
 Level 1
 
