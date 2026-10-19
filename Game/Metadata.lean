@@ -1,15 +1,14 @@
 import GameServer
--- import Mathlib.Tactic.Common
+import Mathlib.Analysis.InnerProductSpace.Basic
+import Verbose.English.All
 
-/-! Use this file to add things that should be available in all levels.
-
-For example, this demo imports the mathlib tactics
-
-*Note*: As long as `Game.lean` exists and ends with the `MakeGame` command,
-you are completely free how you structure your lean project, this is merely
-a suggestion.
-
-*Bug*: However, things are bugged out if the levels of different worlds are imported
-in a random order. Therefore, you should keep the structure of one file Lean file per world
-which imports all its levels.
+/-!
+Available in every level: Mathlib's real inner product spaces, Verbose Lean's
+controlled-natural-language tactics (English keywords; Lean does not accept
+Chinese keywords), and a few small lemmas of our own.
 -/
+
+/-- 若 `a ≠ b` 且 `a * x = b * x`，则 `x = 0`。 -/
+theorem cancel_of_ne {a b x : ℝ} (hab : a ≠ b) (h : a * x = b * x) : x = 0 := by
+  have h2 : (a - b) * x = 0 := by rw [sub_mul]; linarith
+  exact (mul_eq_zero.mp h2).resolve_left (sub_ne_zero.mpr hab)

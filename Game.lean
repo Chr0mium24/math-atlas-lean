@@ -1,28 +1,24 @@
-import Game.Levels.DemoWorld
+import Game.Levels.SpectralWorld
 
--- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "数学的骨架 · 证明世界"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use **markdown**.
+这是网站《数学的骨架》的证明练习部分。现成的 Lean 游戏已经覆盖了逻辑、集合、线性代数（到 Cauchy–Schwarz）和实分析的 ε-N，
+这里只做它们还没覆盖的部分，从谱定理开始。
+
+证明用 Verbose Lean 的写法：每一行读起来就是纸上证明的一句话。命令是英文的（Lean 不接受中文关键字），讲解和提示是中文的。
+
+当前是原型，只有一关。
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
-
-For example: Game version, Credits, Link to Github and Zulip, etc.
-
-Use **markdown**.
+- 网站：《数学的骨架》（math-atlas）
+- 源码：github.com/Chr0mium24/math-atlas-lean
+- 用到：lean4game、Mathlib、Verbose Lean（Patrick Massot，Apache-2.0）
 "
 
-/-! Information to be displayed on the servers landing page. -/
-Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
--- Prerequisites "" -- add this if your game depends on other games
--- CoverImage "images/cover.png"
+Languages "zh"
+CaptionShort "谱定理世界（原型）"
+CaptionLong "从 Cauchy–Schwarz 接着往下：对称算子、正交特征向量、谱定理，用 Verbose Lean 的自然语言写法证明。"
 
-/-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

@@ -51,7 +51,10 @@ require "leanprover-community" / mathlib @ git leanVersion
 ```
  -/
 
--- require "leanprover-community" / mathlib @ git leanVersion
+require "leanprover-community" / mathlib @ git leanVersion
+
+-- Controlled-natural-language tactics (Patrick Massot, Apache-2.0)
+require verbose from git "https://github.com/PatrickMassot/verbose-lean4.git" @ "v4.23.0"
 
 /-!
 # PACKAGE CONFIGURATION
