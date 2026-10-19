@@ -135,15 +135,12 @@
    "configFile": "lakefile.lean"
   },
   {
-   "url": "https://github.com/PatrickMassot/verbose-lean4.git",
-   "type": "git",
-   "subDir": null,
+   "type": "path",
    "scope": "",
-   "rev": "62558afa39b4b5c64cf45d36d0147a863a24982a",
    "name": "verbose",
    "manifestFile": "lake-manifest.json",
-   "inputRev": "v4.23.0",
    "inherited": false,
+   "dir": "./vendor/verbose",
    "configFile": "lakefile.toml"
   }
  ],
