@@ -67,6 +67,21 @@ TheoremDoc real_inner_smul_right as "real_inner_smul_right" in "内积"
 TheoremDoc cancel_of_ne as "cancel_of_ne" in "实数"
 
 NewTactic «Fact» «Calc» «We» rw
+/-- Verbose 短语的一部分：`h applied to x and y` 表示把 `h` 用在 `x` 和 `y` 上。 -/
+TacticDoc «applied»
+
+/-- Verbose 短语的一部分：`applied to`。 -/
+TacticDoc «to»
+
+/-- Verbose 短语的一部分：`Calc` 里的 `_ = B from h` 表示"这一步由 `h` 得到"。 -/
+TacticDoc «from»
+
+/-- Verbose 短语的一部分：`We conclude by h` 表示"由 `h` 直接得出结论"。 -/
+TacticDoc «conclude»
+
+/-- Verbose 短语的一部分：连接多个条件，例如 `applied to x and y`。 -/
+TacticDoc «and»
+
 -- Verbose phrases are checked word by word; allow the connective words without listing them
 NewHiddenTactic «applied» «to» «from» «conclude» «and»
 NewTheorem real_inner_smul_left real_inner_smul_right cancel_of_ne
